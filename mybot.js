@@ -2,7 +2,7 @@
 * @Author: Nguyễn Minh Trí
 * @Date:   2019-02-19 16:08:06
 * @Last Modified by:   Admin
-* @Last Modified time: 2019-02-19 16:21:05
+* @Last Modified time: 2019-02-19 16:22:16
 */
 const Discord = require('discord.js')
 const client = new Discord.Client()
@@ -37,7 +37,7 @@ client.on('ready', () => {
 	var cur_time = moment().format('LTS');
 	setInterval(function(){
 		list_check.forEach(function(rec){
-			var generalChannel = client.channels.get("time-boss") // Replace with known channel ID
+			var generalChannel = client.channels.get("547007272623276034") // Replace with known channel ID
 			// if(cur_time == rec.time){
    			//generalChannel.send(rec.mess) 
 			// }
