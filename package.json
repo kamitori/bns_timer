@@ -1,0 +1,23 @@
+{
+  "name": "bns_timer",
+  "version": "1.0.0",
+  "description": "bot thong bao time boss BNS VN",
+  "main": "mybot.js",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamitori/bns_timer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kamitori/bns_timer/issues"
+  },
+  "homepage": "https://github.com/kamitori/bns_timer#readme"
+}
