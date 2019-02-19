@@ -2,7 +2,7 @@
 * @Author: Nguyễn Minh Trí
 * @Date:   2019-02-19 16:08:06
 * @Last Modified by:   Admin
-* @Last Modified time: 2019-02-19 16:33:12
+* @Last Modified time: 2019-02-19 17:11:45
 */
 const Discord = require('discord.js')
 const client = new Discord.Client()
@@ -37,7 +37,7 @@ client.on('ready', () => {
 	var cur_time = moment().format('LTS');
 	setInterval(function(){
 		list_check.forEach(function(rec){
-			var generalChannel = client.channels.get("547007272623276034") // Replace with known channel ID
+			var generalChannel = client.channels.get("547359272825257984") // Replace with known channel ID
 			if(cur_time == rec.time){
    				generalChannel.send(rec.mess) 
 			}
@@ -48,6 +48,6 @@ client.on('ready', () => {
 })
 
 
-bot_secret_token = "NTQ3MzMxNzA5NjA4MTMyNjA4.D01P3Q.JJs9XNaSOXuWU_pr00V1GX-BEaY"
+bot_secret_token = "NTQ3MzU5MzUxNjIzMzg1MTE5.D01nwQ.AsQ_V-kHFkZFp9EnwwiRCVqmhIU"
 
 client.login(bot_secret_token)
