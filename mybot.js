@@ -2,7 +2,7 @@
 * @Author: Nguyễn Minh Trí
 * @Date:   2019-02-19 16:08:06
 * @Last Modified by:   Admin
-* @Last Modified time: 2019-02-19 16:22:16
+* @Last Modified time: 2019-02-19 16:33:12
 */
 const Discord = require('discord.js')
 const client = new Discord.Client()
@@ -10,7 +10,7 @@ var moment = require('moment');
 
 client.on('ready', () => {
 	var list_mess_rong = [
-		'Tới giờ đi rồng kìa tụi mày'
+		'Xin chào các võ hiệp, đã đến giờ đi Tổ Hỏa Long'
 	];
 	var list_check = [
 		{
@@ -38,13 +38,11 @@ client.on('ready', () => {
 	setInterval(function(){
 		list_check.forEach(function(rec){
 			var generalChannel = client.channels.get("547007272623276034") // Replace with known channel ID
-			// if(cur_time == rec.time){
-   			//generalChannel.send(rec.mess) 
-			// }
-			generalChannel.send('Xin chào bé Lê Zăn Đạt');
-			console.log('Message has send');
+			if(cur_time == rec.time){
+   				generalChannel.send(rec.mess) 
+			}
 		})
-	}, 5000)
+	},60000)
 
     console.log("Connected as " + client.user.tag);
 })
