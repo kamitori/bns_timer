@@ -2,15 +2,51 @@
 * @Author: Nguyễn Minh Trí
 * @Date:   2019-02-19 16:08:06
 * @Last Modified by:   Admin
-* @Last Modified time: 2019-02-19 16:10:55
+* @Last Modified time: 2019-02-19 16:21:05
 */
 const Discord = require('discord.js')
 const client = new Discord.Client()
 var moment = require('moment');
 
 client.on('ready', () => {
+	var list_mess_rong = [
+		'Tới giờ đi rồng kìa tụi mày'
+	];
+	var list_check = [
+		{
+			time: '2:59:00 AM',
+			mess: list_mess_rong[0],
+			note: 'Rồng 10h'
+		},
+		{
+			time: '6:59:00 AM',
+			mess: list_mess_rong[0],
+			note: 'Rồng 14h'
+		},
+		{
+			time: '10:59:00 AM',
+			mess: list_mess_rong[0],
+			note: 'Rồng 18h'
+		},
+		{
+			time: '2:59:00 PM',
+			mess: list_mess_rong[0],
+			note: 'Rồng 22h'
+		},
+	];
+	var cur_time = moment().format('LTS');
+	setInterval(function(){
+		list_check.forEach(function(rec){
+			var generalChannel = client.channels.get("time-boss") // Replace with known channel ID
+			// if(cur_time == rec.time){
+   			//generalChannel.send(rec.mess) 
+			// }
+			generalChannel.send('Xin chào bé Lê Zăn Đạt');
+			console.log('Message has send');
+		})
+	}, 5000)
+
     console.log("Connected as " + client.user.tag);
-    console.log(moment().format('LTS'));
 })
 
 
