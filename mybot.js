@@ -2,7 +2,7 @@
 * @Author: Nguyễn Minh Trí
 * @Date:   2019-02-19 16:08:06
 * @Last Modified by:   Admin
-* @Last Modified time: 2019-02-19 16:08:33
+* @Last Modified time: 2019-02-19 16:10:55
 */
 const Discord = require('discord.js')
 const client = new Discord.Client()
@@ -10,7 +10,7 @@ var moment = require('moment');
 
 client.on('ready', () => {
     console.log("Connected as " + client.user.tag);
-    console.log(moment.format('d-m-Y H:i:s'));
+    console.log(moment().format('LTS'));
 })
 
 
